@@ -71,11 +71,34 @@ src/
 
 ---
 
+
+---
+
+# 📝 ToDoList Angular Application  
+
+Une application moderne et personnalisable pour gérer vos tâches efficacement.  
+
+---
 ## 🎯 Installation et Lancement  
 
 1. Clonez le dépôt :  
    ```bash  
-   git clone https://github.com/WALIDSAIFI/TodoList
+   git clone https://github.com/WALIDSAIFI/
+   
+
+```bash
+# Accédez au dossier du projet  
+cd todolist-angular  
+
+# Installez les dépendances  
+npm install  
+
+# Lancez l'application  
+ng serve  
+
+# Accédez à l'application via  
+http://localhost:4200  
+
 
 
 
