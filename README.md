@@ -77,3 +77,17 @@ src/
    ```bash  
    git clone https://github.com/WALIDSAIFI/TodoList
 
+
+
+
+### Explication des Dossiers et Fichiers  
+- **components/** : Contient les composants Angular pour les fonctionnalités principales.  
+- **services/** : Gère la logique métier et la communication entre composants.  
+- **models/** : Définit les modèles de données utilisés dans l'application.  
+- **pipes/** : Pipes personnalisés pour le formatage des données (dates, textes).  
+- **modules/** : Organise l'application en modules Angular.  
+- **app-routing.module.ts** : Configuration des routes de l'application.  
+- **assets/** : Ressources comme les images et les icônes.  
+- **environments/** : Fichiers de configuration pour différents environnements (dev, prod).  
+
+---  
