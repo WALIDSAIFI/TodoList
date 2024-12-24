@@ -47,23 +47,26 @@ Une application de gestion de tâches moderne et intuitive, développée avec **
   - Pipes pour le formatage des données.  
 
 ---
+---
 
 ## 🖥️ Structure du Projet  
 
-src/
-├── app/
-│ ├── components/ # Composants réutilisables
-│ │ ├── task-list/ # Liste des tâches
-│ │ ├── task-form/ # Formulaire d'ajout/modification
-│ │ ├── dashboard/ # Tableau de bord statistique
-│ │ └── search-bar/ # Barre de recherche
-│ ├── services/ # Services Angular
-│ ├── models/ # Modèles de données
-│ ├── pipes/ # Pipes pour le formatage
-│ ├── modules/ # Modules Angular
-│ └── app-routing.module.ts # Routage principal
-├── assets/ # Assets (images, icônes, etc.)
-└── environments/ # Fichiers de configuration
+```plaintext
+src/  
+├── app/  
+│   ├── components/          # Composants réutilisables  
+│   │   ├── task-list/       # Liste des tâches  
+│   │   ├── task-form/       # Formulaire d'ajout/modification  
+│   │   ├── dashboard/       # Tableau de bord statistique  
+│   │   └── search-bar/      # Barre de recherche  
+│   ├── services/            # Services Angular  
+│   ├── models/              # Modèles de données  
+│   ├── pipes/               # Pipes pour le formatage  
+│   ├── modules/             # Modules Angular  
+│   └── app-routing.module.ts # Routage principal  
+├── assets/                  # Assets (images, icônes, etc.)  
+└── environments/            # Fichiers de configuration  
+
 
 
 ---
@@ -73,4 +76,4 @@ src/
 1. Clonez le dépôt :  
    ```bash  
    git clone https://github.com/WALIDSAIFI/TodoList
-   
+
