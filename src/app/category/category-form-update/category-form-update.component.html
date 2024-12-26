@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">Modifier la Catégorie</h2>
+        </div>
+        <div class="card-body">
+          <form #categoryForm="ngForm" (ngSubmit)="onSubmit(categoryForm)">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nom de la Catégorie:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                [(ngModel)]="category.name"
+                required
+                #name="ngModel"
+                class="form-control"
+                placeholder="Entrez le nom de la catégorie">
+              <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger mt-2">
+                <div *ngIf="name.errors?.['required']">Le nom est obligatoire.</div>
+              </div>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" [disabled]="!categoryForm.valid" class="btn btn-primary">
+                Modifier la Catégorie
+              </button>
+              <button type="button" class="btn btn-secondary" (click)="router.navigate(['/categoryList'])">
+                Annuler
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

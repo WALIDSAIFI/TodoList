@@ -12,6 +12,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { CategoryComponent } from './category/category.component';
 import { TaskComponent } from './task/task.component';
 import {FormsModule} from "@angular/forms";
+import { CategoryFormUpdateComponent } from './category/category-form-update/category-form-update.component';
+import { TaskFormUpdateComponent } from './task-form-update/task-form-update.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {FormsModule} from "@angular/forms";
     TaskFormComponent,
     StatisticsComponent,
     CategoryComponent,
-    TaskComponent
+    TaskComponent,
+    CategoryFormUpdateComponent,
+    TaskFormUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,59 @@
-<p>task-list works!</p>
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Liste des Tâches</h2>
+    <button class="btn btn-primary" routerLink="/taskform">
+      + Ajouter une Tâche
+    </button>
+  </div>
+
+  <div class="card shadow">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>Titre</th>
+              <th>Description</th>
+              <th>Date d'échéance</th>
+              <th>Catégorie</th>
+              <th>Statut</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let task of tasks; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ task.title }}</td>
+              <td>{{ task.description }}</td>
+              <td>{{ task.dueDate | date:'dd/MM/yyyy' }}</td>
+              <td>{{ getCategoryName(task.categoryId) }}</td>
+              <td>
+                <span [class]="getStatusClass(task.status)">
+                  {{ getStatusLabel(task.status) }}
+                </span>
+              </td>
+              <td>
+                <div class="btn-group" role="group">
+                  <button
+                    class="btn btn-warning btn-sm me-2"
+                    (click)="router.navigate(['/task/edit', task.id])">
+                    Modifier
+                  </button>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    (click)="deleteTask(task.id)">
+                    Supprimer
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr *ngIf="tasks.length === 0">
+              <td colspan="7" class="text-center">Aucune tâche trouvée.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

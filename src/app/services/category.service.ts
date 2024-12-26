@@ -38,4 +38,25 @@ export class CategoryService {
     const categories = this.getCategories().filter((cat) => cat.id !== categoryId);
     localStorage.setItem(this.storageKey, JSON.stringify(categories)); // Met à jour le stockage local
   }
+
+  updateCategory(category: Category): boolean {
+    const categories = this.getCategories();
+    const index = categories.findIndex(cat => cat.id === category.id);
+    
+    // Check if another category already has this name (excluding current category)
+    const nameExists = categories.some(
+      cat => cat.id !== category.id && cat.name.toLowerCase() === category.name.toLowerCase()
+    );
+    
+    if (nameExists) {
+      return false;
+    }
+    
+    if (index !== -1) {
+      categories[index] = category;
+      localStorage.setItem(this.storageKey, JSON.stringify(categories));
+      return true;
+    }
+    return false;
+  }
 }

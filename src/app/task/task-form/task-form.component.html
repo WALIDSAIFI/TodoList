@@ -1,1 +1,86 @@
-<p>task-form works!</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">Ajouter une Tâche</h2>
+        </div>
+        <div class="card-body">
+          <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
+            <div class="mb-3">
+              <label for="title" class="form-label">Titre:</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                [(ngModel)]="task.title"
+                required
+                class="form-control"
+                placeholder="Entrez le titre de la tâche">
+            </div>
+
+            <div class="mb-3">
+              <label for="description" class="form-label">Description:</label>
+              <textarea
+                id="description"
+                name="description"
+                [(ngModel)]="task.description"
+                class="form-control"
+                rows="3"
+                placeholder="Entrez la description"></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="dueDate" class="form-label">Date d'échéance:</label>
+              <input
+                type="date"
+                id="dueDate"
+                name="dueDate"
+                [(ngModel)]="task.dueDate"
+                required
+                class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label for="category" class="form-label">Catégorie:</label>
+              <select
+                id="category"
+                name="categoryId"
+                [(ngModel)]="task.categoryId"
+                required
+                class="form-control">
+                <option value="">Sélectionnez une catégorie</option>
+                <option *ngFor="let category of categories" [value]="category.id">
+                  {{category.name}}
+                </option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="status" class="form-label">Statut:</label>
+              <select
+                id="status"
+                name="status"
+                [(ngModel)]="task.status"
+                required
+                class="form-control">
+                <option value="TODO">À faire</option>
+                <option value="IN_PROGRESS">En cours</option>
+                <option value="DONE">Terminé</option>
+              </select>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" [disabled]="!taskForm.valid" class="btn btn-primary">
+                Ajouter la Tâche
+              </button>
+              <button type="button" class="btn btn-secondary" (click)="router.navigate(['/taskList'])">
+                Annuler
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
