@@ -5,8 +5,11 @@ import {CategoryListComponent} from "./category/category-list/category-list.comp
 import {CategoryFormComponent} from "./category/category-form/category-form.component";
 import {CategoryFormUpdateComponent} from "./category/category-form-update/category-form-update.component";
 import {TaskListComponent} from "./task/task-list/task-list.component";
-import {TaskFormUpdateComponent} from "./task-form-update/task-form-update.component";
+import {TaskFormUpdateComponent} from "./task/task-form-update/task-form-update.component";
 import { StatisticsComponent } from './statistics/statistics.component';
+
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/statistics', pathMatch: 'full' },
