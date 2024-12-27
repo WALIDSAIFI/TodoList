@@ -54,7 +54,7 @@ Une application de gestion de tâches moderne et intuitive, développée avec **
 ```plaintext
 src/  
 ├── app/  
-│   ├── components/          # Composants réutilisables  
+│   ├───| 
 │   │   ├── task-list/       # Liste des tâches  
 │   │   ├── task-form/       # Formulaire d'ajout/modification  
 │   │   ├── dashboard/       # Tableau de bord statistique  
