@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <h2 class="mb-4">Tableau de Bord</h2>
+  
+  <div class="row">
+    <!-- Card pour le total des catégories -->
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card bg-primary text-white h-100">
+        <div class="card-body">
+          <h5 class="card-title">Total Catégories</h5>
+          <p class="card-text display-4">{{ totalCategories }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card pour le total des tâches -->
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card bg-info text-white h-100">
+        <div class="card-body">
+          <h5 class="card-title">Total Tâches</h5>
+          <p class="card-text display-4">{{ totalTasks }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <!-- Graphique circulaire -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="chart-container">
+            <canvas #statusChart></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Graphique en barres -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="chart-container">
+            <canvas #statusBarChart></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

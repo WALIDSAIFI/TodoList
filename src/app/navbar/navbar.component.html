@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/statistics">
+      <i class="fas fa-tasks me-2"></i>Task Manager
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Dashboard/Statistiques -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/statistics" routerLinkActive="active">
+            <i class="fas fa-chart-bar me-1"></i>Dashboard
+          </a>
+        </li>
+
+        <!-- Catégories -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/categoryList" routerLinkActive="active">
+            <i class="fas fa-folder me-1"></i>Catégories
+          </a>
+        </li>
+
+        <!-- Tâches -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/taskList" routerLinkActive="active">
+            <i class="fas fa-list-check me-1"></i>Tâches
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>

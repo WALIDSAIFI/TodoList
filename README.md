@@ -1,116 +1,27 @@
-# 📝 ToDoList Application  
+# TodoApp
 
-![Angular](https://img.shields.io/badge/Angular-17-red?style=for-the-badge&logo=angular)  
-![SCSS](https://img.shields.io/badge/SCSS-Used-blue?style=for-the-badge&logo=sass)  
-![Bootstrap](https://img.shields.io/badge/Bootstrap-Used-purple?style=for-the-badge&logo=bootstrap)  
-![TypeScript](https://img.shields.io/badge/TypeScript-Language-blue?style=for-the-badge&logo=typescript)  
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)  
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
 
-Une application de gestion de tâches moderne et intuitive, développée avec **Angular 17**, pour une expérience utilisateur fluide et réactive.  
+## Development server
 
----
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## 🚀 Fonctionnalités Principales  
-### 📋 Gestion des Tâches  
-- **Créer, modifier et supprimer** des tâches.  
-- Champs disponibles :  
-  - Titre (validation de longueur).  
-  - Description (optionnelle).  
-  - Date et heure d'échéance (avec validation).  
-  - Priorité : haute, moyenne, basse.  
-  - Statut : non commencée, en cours, terminée.  
+## Code scaffolding
 
-### 📂 Gestion des Catégories  
-- Catégorisation des tâches (Travail, Personnel, Courses, etc.).  
-- Ajout, modification et suppression des catégories avec validation des doublons.  
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### 🔍 Recherche Dynamique  
-- Système de recherche en temps réel basé sur le **titre** ou la **description** des tâches.  
+## Build
 
-### 📊 Tableau de Bord Statistique  
-- **Pourcentage de tâches accomplies** et non accomplies.  
-- **Nombre de tâches en retard**.  
-- Intégration graphique interactive avec **NgxCharts** ou **Chart.js**.  
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
----
+## Running unit tests
 
-## 🛠️ Technologies Utilisées  
-- **Frontend** :  
-  - Angular 17  
-  - TypeScript  
-  - SCSS (ou CSS)  
-  - Bootstrap / Tailwind  
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-- **Autres outils** :  
-  - LocalStorage pour la persistance des données.  
-  - Observables pour la gestion réactive.  
-  - Pipes pour le formatage des données.  
+## Running end-to-end tests
 
----
----
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## 🖥️ Structure du Projet  
+## Further help
 
-```plaintext
-src/  
-├── app/  
-│   ├── components/          # Composants réutilisables  
-│   │   ├── task-list/       # Liste des tâches  
-│   │   ├── task-form/       # Formulaire d'ajout/modification  
-│   │   ├── dashboard/       # Tableau de bord statistique  
-│   │   └── search-bar/      # Barre de recherche  
-│   ├── services/            # Services Angular  
-│   ├── models/              # Modèles de données  
-│   ├── pipes/               # Pipes pour le formatage  
-│   ├── modules/             # Modules Angular  
-│   └── app-routing.module.ts # Routage principal  
-├── assets/                  # Assets (images, icônes, etc.)  
-└── environments/            # Fichiers de configuration  
-
-
-
----
-
-
----
-
-# 📝 ToDoList Angular Application  
-
-Une application moderne et personnalisable pour gérer vos tâches efficacement.  
-
----
-## 🎯 Installation et Lancement  
-
-1. Clonez le dépôt :  
-   ```bash  
-   git clone https://github.com/WALIDSAIFI/
-   
-
-```bash
-# Accédez au dossier du projet  
-cd todolist-angular  
-
-# Installez les dépendances  
-npm install  
-
-# Lancez l'application  
-ng serve  
-
-# Accédez à l'application via  
-http://localhost:4200  
-
-
-
-
-
-### Explication des Dossiers et Fichiers  
-- **components/** : Contient les composants Angular pour les fonctionnalités principales.  
-- **services/** : Gère la logique métier et la communication entre composants.  
-- **models/** : Définit les modèles de données utilisés dans l'application.  
-- **pipes/** : Pipes personnalisés pour le formatage des données (dates, textes).  
-- **modules/** : Organise l'application en modules Angular.  
-- **app-routing.module.ts** : Configuration des routes de l'application.  
-- **assets/** : Ressources comme les images et les icônes.  
-- **environments/** : Fichiers de configuration pour différents environnements (dev, prod).  
-
----  
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,0 +1,23 @@
+<div class="container mt-4 d-flex justify-content-center">
+  <div class="card shadow-sm p-4" style="max-width: 500px; width: 100%;">
+    <h3 class="text-center mb-4">Ajouter une catégorie</h3>
+    <form #categoryForm="ngForm" (ngSubmit)="onSubmit(categoryForm)">
+      <div class="mb-3">
+        <label for="categoryName" class="form-label">Nom de la catégorie</label>
+        <input
+          type="text"
+          class="form-control"
+          id="categoryName"
+          name="name"
+          [(ngModel)]="category.name"
+          placeholder="Enter nom de la catégorie"
+          required
+        />
+
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Ajouter une catégorie</button>
+      </div>
+    </form>
+  </div>
+</div>
