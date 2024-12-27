@@ -12,6 +12,8 @@ import {CategoryService} from "../../services/category.service";
 })
 export class CategoryListComponent {
   categories: Category[] = [];
+  allCategories: Category[] = [];
+  searchTerm: string = '';
 
   constructor(
     private categoryService: CategoryService,
@@ -21,7 +23,18 @@ export class CategoryListComponent {
   }
 
   loadCategories(): void {
-    this.categories = this.categoryService.getCategories();
+    this.allCategories = this.categoryService.getCategories();
+    this.categories = [...this.allCategories];
+  }
+
+  filterCategories(): void {
+    if (!this.searchTerm) {
+      this.categories = [...this.allCategories];
+    } else {
+      this.categories = this.allCategories.filter(category =>
+        category.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    }
   }
 
   deleteCategory(categoryId: number): void {

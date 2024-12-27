@@ -12,7 +12,9 @@ import { Category } from '../../models/category.model';
 })
 export class TaskListComponent {
   tasks: Task[] = [];
+  allTasks: Task[] = [];
   categories: Category[] = [];
+  searchTerm: string = '';
 
   constructor(
     private taskService: TaskService,
@@ -24,7 +26,21 @@ export class TaskListComponent {
   }
 
   loadTasks(): void {
-    this.tasks = this.taskService.getTasks();
+    this.allTasks = this.taskService.getTasks();
+    this.tasks = [...this.allTasks];
+  }
+
+  filterTasks(): void {
+    if (!this.searchTerm) {
+      this.tasks = [...this.allTasks];
+    } else {
+      const searchTermLower = this.searchTerm.toLowerCase();
+      this.tasks = this.allTasks.filter(task =>
+        task.title.toLowerCase().includes(searchTermLower) ||
+        task.description.toLowerCase().includes(searchTermLower) ||
+        this.getCategoryName(task.categoryId).toLowerCase().includes(searchTermLower)
+      );
+    }
   }
 
   deleteTask(taskId: number): void {
