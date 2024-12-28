@@ -25,12 +25,12 @@ Une application de gestion de tâches moderne et intuitive, développée avec **
 - Ajout, modification et suppression des catégories avec validation des doublons.  
 
 ### 🔍 Recherche Dynamique  
-- Système de recherche en temps réel basé sur le **titre** ou la **description** des tâches.  
+- Système de recherche en temps réel basé sur le **titre** des tâches.  
 
 ### 📊 Tableau de Bord Statistique  
 - **Pourcentage de tâches accomplies** et non accomplies.  
 - **Nombre de tâches en retard**.  
-- Intégration graphique interactive avec **NgxCharts** ou **Chart.js**.  
+- Intégration graphique interactive avec **Chart.js**.  
 
 ---
 
@@ -38,8 +38,8 @@ Une application de gestion de tâches moderne et intuitive, développée avec **
 - **Frontend** :  
   - Angular 17  
   - TypeScript  
-  - SCSS (ou CSS)  
-  - Bootstrap / Tailwind  
+  - CSS 
+  - Bootstrap 
 
 - **Autres outils** :  
   - LocalStorage pour la persistance des données.  
@@ -54,11 +54,11 @@ Une application de gestion de tâches moderne et intuitive, développée avec **
 ```plaintext
 src/  
 ├── app/  
-│   ├───| 
-│   │   ├── task-list/       # Liste des tâches  
-│   │   ├── task-form/       # Formulaire d'ajout/modification  
-│   │   ├── dashboard/       # Tableau de bord statistique  
-│   │   └── search-bar/      # Barre de recherche  
+│   ├───|──
+│   │   ├── Catégories/ 
+│   │   ├── task      
+│   │   ├── Statistics/        
+│   │   
 │   ├── services/            # Services Angular  
 │   ├── models/              # Modèles de données  
 │   ├── pipes/               # Pipes pour le formatage  
