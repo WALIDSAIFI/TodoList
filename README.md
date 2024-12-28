@@ -1,10 +1,10 @@
 # 📝 ToDoList Application  
 
 ![Angular](https://img.shields.io/badge/Angular-17-red?style=for-the-badge&logo=angular)  
-![SCSS](https://img.shields.io/badge/SCSS-Used-blue?style=for-the-badge&logo=sass)  
+![CSS](https://img.shields.io/badge/CSS-Used-blue?style=for-the-badge&logo=css)  
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-Used-purple?style=for-the-badge&logo=bootstrap)  
 ![TypeScript](https://img.shields.io/badge/TypeScript-Language-blue?style=for-the-badge&logo=typescript)  
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)  
+
 
 Une application de gestion de tâches moderne et intuitive, développée avec **Angular 17**, pour une expérience utilisateur fluide et réactive.  
 
