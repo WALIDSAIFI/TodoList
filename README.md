@@ -99,11 +99,11 @@ src/
 ![Dashboard](https://github.com/WALIDSAIFI/TodoList/blob/main/dashbord.png)  
 
 ### 🔍 Recherche Dynamique  
-![Search](https://github.com/user-attachments/assets/task-search.png)  
+![Search](https://github.com/WALIDSAIFI/TodoList/blob/main/rechereche.png) 
 
 ### 📂 Gestion des Catégories  
-![Categories](https://github.com/user-attachments/assets/manage-categories.png)  
+![Categories](https://github.com/WALIDSAIFI/TodoList/blob/main/cat.png)  
 
 ### 📃 Gestion des Tâches  
-![Tasks](https://github.com/user-attachments/assets/manage-tasks.png)
+![Tasks](https://github.com/WALIDSAIFI/TodoList/blob/main/task.png)
 
