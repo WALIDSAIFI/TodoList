@@ -104,7 +104,8 @@ http://localhost:4200
 
 
 ### Explication des Dossiers et Fichiers  
-- **components/** : Contient les composants Angular pour les fonctionnalités principales.  
+- **components/** : Contient les composants Angular pour ![dashbord](https://github.com/user-attachments/assets/55e59dd3-3ac1-4d16-a05a-f4ef8f6a69c8)
+les fonctionnalités principales.  
 - **services/** : Gère la logique métier et la communication entre composants.  
 - **models/** : Définit les modèles de données utilisés dans l'application.  
 - **pipes/** : Pipes personnalisés pour le formatage des données (dates, textes).  
@@ -114,3 +115,5 @@ http://localhost:4200
 - **environments/** : Fichiers de configuration pour différents environnements (dev, prod).  
 
 ---  
+
+
