@@ -17,7 +17,8 @@ export class TaskFormUpdateComponent implements OnInit {
     description: '',
     dueDate: new Date(),
     status: 'TODO',
-    categoryId: 0
+    categoryId: 0,
+    priority: 'MEDIUM'
   };
 
   categories: Category[] = [];
@@ -46,14 +47,27 @@ export class TaskFormUpdateComponent implements OnInit {
   }
 
   onSubmit(form: any) {
-    if (form.valid) {
+    if (form.valid && this.task.categoryId) {
+      // Vérifier la description
+      const wordCount = this.task.description.trim().split(/\s+/).length;
+      if (this.task.description.length > 100) {
+        window.alert('La description ne doit pas dépasser 100 caractères.');
+        return;
+      }
+      if (wordCount < 5) {
+        window.alert('La description doit contenir au moins 5 mots.');
+        return;
+      }
+
       const success = this.taskService.updateTask(this.task);
       if (success) {
         window.alert('Tâche mise à jour avec succès!');
         this.router.navigate(['/taskList']);
       } else {
-        window.alert('Erreur lors de la mise à jour de la tâche');
+        window.alert('Erreur : Une tâche avec ce titre existe déjà');
       }
+    } else {
+      window.alert('Veuillez remplir tous les champs requis.');
     }
   }
 }

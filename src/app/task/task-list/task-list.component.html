@@ -27,6 +27,7 @@
               <th>Description</th>
               <th>Date d'échéance</th>
               <th>Catégorie</th>
+              <th>Priorité</th>
               <th>Statut</th>
               <th>Actions</th>
             </tr>
@@ -37,7 +38,16 @@
               <td>{{ task.title }}</td>
               <td>{{ task.description }}</td>
               <td>{{ task.dueDate | date:'dd/MM/yyyy' }}</td>
-              <td>{{ getCategoryName(task.categoryId) }}</td>
+              <td>
+                <span class="badge bg-secondary">
+                  {{ getCategoryName(task.categoryId) }}
+                </span>
+              </td>
+              <td>
+                <span [class]="getPriorityClass(task.priority)">
+                  {{ getPriorityLabel(task.priority) }}
+                </span>
+              </td>
               <td>
                 <span [class]="getStatusClass(task.status)">
                   {{ getStatusLabel(task.status) }}

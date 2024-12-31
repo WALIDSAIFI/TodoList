@@ -3,6 +3,7 @@ export interface Task {
   title: string;
   description: string;
   dueDate: Date;
-  status: 'TODO' | 'IN_PROGRESS' | 'DONE';
+  status: string;
   categoryId: number;
+  priority: 'HIGH' | 'MEDIUM' | 'LOW';
 }

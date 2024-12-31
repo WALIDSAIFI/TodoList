@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 import {Category} from "../../models/category.model";
 import {CategoryService} from "../../services/category.service";
+import {TaskService} from "../../services/task.service";
 
 @Component({
   selector: 'app-category-list',
@@ -17,6 +18,7 @@ export class CategoryListComponent {
 
   constructor(
     private categoryService: CategoryService,
+    private taskService: TaskService,
     public router: Router
   ) {
     this.loadCategories();
@@ -38,7 +40,15 @@ export class CategoryListComponent {
   }
 
   deleteCategory(categoryId: number): void {
-    if (confirm('Êtes-vous sûr de vouloir supprimer cette catégorie ?')) {
+    // Obtenir le nombre de tâches associées
+    const tasksInCategory = this.taskService.getTasksByCategory(categoryId).length;
+    
+    let message = 'Êtes-vous sûr de vouloir supprimer cette catégorie ?';
+    if (tasksInCategory > 0) {
+      message += `\n${tasksInCategory} tâche(s) associée(s) seront également supprimée(s).`;
+    }
+
+    if (confirm(message)) {
       this.categoryService.deleteCategory(categoryId);
       this.loadCategories();
     }

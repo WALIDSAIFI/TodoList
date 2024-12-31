@@ -10,3 +10,20 @@
   border: 1px solid #ced4da;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+.badge {
+  padding: 0.5em 0.75em;
+  font-size: 0.875em;
+  font-weight: 500;
+  border-radius: 0.25rem;
+}
+
+.badge.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+/* Ajout d'un effet hover sur le badge de catégorie */
+.badge.bg-secondary:hover {
+  background-color: #5a6268 !important;
+  cursor: default;
+}

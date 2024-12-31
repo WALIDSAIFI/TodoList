@@ -13,7 +13,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/statistics', pathMatch: 'full' },
-  { path : "categoryform" , component: CategoryFormComponent },
+  { path : "categoryform" , component: CategoryFormComponent }, 
   { path :"categoryList" , component: CategoryListComponent },
   { path: 'category/edit/:id', component: CategoryFormUpdateComponent },
   { path: 'taskform', component: TaskFormComponent },

@@ -1,6 +1,6 @@
-
 import { Injectable } from '@angular/core';
 import { Category } from '../models/category.model';
+import { TaskService } from './task.service';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +8,9 @@ import { Category } from '../models/category.model';
 export class CategoryService {
   private storageKey = 'categories';
 
-  constructor() {
+  constructor(
+    private taskService: TaskService
+  ) {
     if (!localStorage.getItem(this.storageKey)) {
       localStorage.setItem(this.storageKey, JSON.stringify([]));
     }
@@ -31,6 +33,12 @@ export class CategoryService {
   deleteCategory(categoryId: number): void {
     const categories = this.getCategories().filter((cat) => cat.id !== categoryId);
     localStorage.setItem(this.storageKey, JSON.stringify(categories));
+
+    const tasks = this.taskService.getTasks();
+    
+    const updatedTasks = tasks.filter(task => task.categoryId !== categoryId);
+    
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
   }
 
   updateCategory(category: Category): boolean {

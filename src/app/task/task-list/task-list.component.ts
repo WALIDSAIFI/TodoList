@@ -51,7 +51,7 @@ export class TaskListComponent {
   }
 
   getCategoryName(categoryId: number): string {
-    const category = this.categories.find(c => c.id === categoryId);
+    const category = this.categories.find(c => c.id === Number(categoryId));
     return category ? category.name : 'Non catégorisé';
   }
 
@@ -69,6 +69,24 @@ export class TaskListComponent {
       case 'TODO': return 'badge bg-danger';
       case 'IN_PROGRESS': return 'badge bg-warning';
       case 'DONE': return 'badge bg-success';
+      default: return 'badge bg-secondary';
+    }
+  }
+
+  getPriorityLabel(priority: string): string {
+    switch (priority) {
+      case 'HIGH': return 'Haute';
+      case 'MEDIUM': return 'Moyenne';
+      case 'LOW': return 'Basse';
+      default: return priority;
+    }
+  }
+
+  getPriorityClass(priority: string): string {
+    switch (priority) {
+      case 'HIGH': return 'badge bg-danger';
+      case 'MEDIUM': return 'badge bg-warning';
+      case 'LOW': return 'badge bg-info';
       default: return 'badge bg-secondary';
     }
   }
