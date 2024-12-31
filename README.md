@@ -96,7 +96,7 @@ src/
 ## 🜐 Captures d'écran  
 
 ### 🔄 Tableau de Bord Statistique  
-![Dashboard](https://github.com/WALIDSAIFI/TodoList/blob/main/dashbord.png)  
+![Dashboard](https://github.com/WALIDSAIFI/TodoList/blob/main/dashhh.png)  
 
 ### 🔍 Recherche Dynamique  
 ![Search](https://github.com/WALIDSAIFI/TodoList/blob/main/rechereche.png) 
