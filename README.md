@@ -1,10 +1,9 @@
-# 📝 ToDoList Application  
+# 🖍 ToDoList Application  
 
 ![Angular](https://img.shields.io/badge/Angular-17-red?style=for-the-badge&logo=angular)  
 ![CSS](https://img.shields.io/badge/CSS-Used-blue?style=for-the-badge&logo=css)  
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-Used-purple?style=for-the-badge&logo=bootstrap)  
 ![TypeScript](https://img.shields.io/badge/TypeScript-Language-blue?style=for-the-badge&logo=typescript)  
-
 
 Une application de gestion de tâches moderne et intuitive, développée avec **Angular 17**, pour une expérience utilisateur fluide et réactive.  
 
@@ -38,8 +37,8 @@ Une application de gestion de tâches moderne et intuitive, développée avec **
 - **Frontend** :  
   - Angular 17  
   - TypeScript  
-  - CSS 
-  - Bootstrap 
+  - CSS  
+  - Bootstrap  
 
 - **Autres outils** :  
   - LocalStorage pour la persistance des données.  
@@ -47,18 +46,15 @@ Une application de gestion de tâches moderne et intuitive, développée avec **
   - Pipes pour le formatage des données.  
 
 ---
----
 
 ## 🖥️ Structure du Projet  
 
 ```plaintext
 src/  
 ├── app/  
-│   ├───|──
-│   │   ├── Catégories/ 
-│   │   ├── task      
-│   │   ├── Statistics/        
-│   │   
+│   ├── Catégories/
+│   ├── Tasks/      
+│   ├── Statistics/        
 │   ├── services/            # Services Angular  
 │   ├── models/              # Modèles de données  
 │   ├── pipes/               # Pipes pour le formatage  
@@ -66,54 +62,48 @@ src/
 │   └── app-routing.module.ts # Routage principal  
 ├── assets/                  # Assets (images, icônes, etc.)  
 └── environments/            # Fichiers de configuration  
-
-
-
----
-
+```
 
 ---
 
-# 📝 ToDoList Angular Application  
-
-Une application moderne et personnalisable pour gérer vos tâches efficacement.  
-
----
 ## 🎯 Installation et Lancement  
 
 1. Clonez le dépôt :  
    ```bash  
-   git clone https://github.com/WALIDSAIFI/
-   
+   git clone https://github.com/WALIDSAIFI/todolist-angular
+   ```
 
-```bash
-# Accédez au dossier du projet  
-cd todolist-angular  
+2. Accédez au dossier du projet :  
+   ```bash
+   cd todolist-angular
+   ```
 
-# Installez les dépendances  
-npm install  
+3. Installez les dépendances :  
+   ```bash
+   npm install
+   ```
 
-# Lancez l'application  
-ng serve  
+4. Lancez l'application :  
+   ```bash
+   ng serve
+   ```
 
-# Accédez à l'application via  
-http://localhost:4200  
+5. Accédez à l'application via :  
+   [http://localhost:4200](http://localhost:4200)  
 
+---
 
+## 🜐 Captures d'écran  
 
+### 🔄 Tableau de Bord Statistique  
+![Dashboard](https://github.com/WALIDSAIFI/TodoList/blob/main/dashbord.png)  
 
+### 🔍 Recherche Dynamique  
+![Search](https://github.com/user-attachments/assets/task-search.png)  
 
-### Explication des Dossiers et Fichiers  
-- **components/** : Contient les composants Angular pour ![dashbord](https://github.com/user-attachments/assets/55e59dd3-3ac1-4d16-a05a-f4ef8f6a69c8)
-les fonctionnalités principales.  
-- **services/** : Gère la logique métier et la communication entre composants.  
-- **models/** : Définit les modèles de données utilisés dans l'application.  
-- **pipes/** : Pipes personnalisés pour le formatage des données (dates, textes).  
-- **modules/** : Organise l'application en modules Angular.  
-- **app-routing.module.ts** : Configuration des routes de l'application.  
-- **assets/** : Ressources comme les images et les icônes.  
-- **environments/** : Fichiers de configuration pour différents environnements (dev, prod).  
+### 📂 Gestion des Catégories  
+![Categories](https://github.com/user-attachments/assets/manage-categories.png)  
 
----  
-
+### 📃 Gestion des Tâches  
+![Tasks](https://github.com/user-attachments/assets/manage-tasks.png)
 
